@@ -18,7 +18,7 @@ function setup() {
 
 	engine = Engine.create();
 	world = engine.world;
-
+  Engine.run(engine);
 	//Create the Bodies Here.
 bobObject1 = new Bob (300,350,30);
 bobObject2 = new Bob (350,350,30);
@@ -35,7 +35,7 @@ rope1 = new Rope (bobObject1.body, roof1.body, -bobDiameter*2,0)
   sling4= new Rope(bobObject4.body,roof1.body,25*2,0);
   sling5= new Rope(bobObject5.body,roof1.body,50*2,0);
 
-	Engine.run(engine);
+	
   
 }
 
@@ -63,7 +63,7 @@ function draw() {
 
 function keyPressed(){
 	if(keyCode === UP_ARROW){
-		Matter.Body.applyForce(bobObject1.body,bobObject1.body.position,{x:-60,y:-60})
+		Matter.Body.applyForce(bobObject1.body,bobObject1.body.position,{x:-50,y:-45})
 
 	}
 }
